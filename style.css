@@ -1,0 +1,80 @@
+/* --- Color Palette Variables --- */
+:root {
+  --bg-color: #f4f7f5;          /* Pale, soft sage-tinted white */
+  --text-dark: #1b2e24;         /* Deep, readable dark forest green */
+  --primary-green: #3b6e51;     /* Leaf green for main accents and buttons */
+  --pale-forest: #608c73;       /* Muted forest green for secondary text/borders */
+  --pale-lime: #dbead5;         /* Soft lime/mint tint for card backgrounds */
+  --white: #ffffff;
+}
+
+/* --- Base Styles --- */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 2rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  color: var(--text-dark);
+  margin-top: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid var(--pale-lime);
+  padding-bottom: 0.5rem;
+}
+
+a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
+/* --- UI Elements & Containers --- */
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--pale-lime);
+  border-left: 5px solid var(--primary-green);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(27, 46, 36, 0.04);
+}
+
+.highlight-box {
+  background-color: var(--pale-lime);
+  padding: 1rem;
+  border-radius: 6px;
+  color: var(--text-dark);
+}
+
+/* --- Buttons --- */
+button, .btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--text-dark);
+}
