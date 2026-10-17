@@ -39,4 +39,13 @@ Progress = "4%";
 alert(Progress);
 // section 5
 Seed = Math.floor(Math.random() * 9999999);
-console.log("Seed set to " + Seed + ".")
+console.log("Seed set to " + Seed + ".");
+Progress = "5%";
+alert(Progress);
+// section 6
+X = 0
+Y = 9
+Z = 0
+console.log("X, Y, and Z files are valid.");
+Progress = "6%";
+alert(Progress);
