@@ -49,3 +49,20 @@ Z = 0
 console.log("X, Y, and Z files are valid.");
 Progress = "6%";
 alert(Progress);
+// section 7
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js';
+console.log("Imported Three.Js");
+Progress = "7%";
+alert(Progress);
+// section 8
+this._threejs = new THREE.WebGLRenderer(); // thank you @SimonDev for the tutorial
+this._threejs.shadowMap.enabled = true
+this._threejs.shadowMap.type = THREE.PCFSoftShadowMap;
+this._threejs.setPixelRatio(window.devicePixelRatio);
+this._threejs.setSize(window.innerWidth, window.innerHeight);
+
+document.body.appendChild(this._threejs.domElement);
+
+window.addEventListerner('resize', () => {
+  this._OnWindowResize();
+}
