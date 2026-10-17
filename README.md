@@ -11,23 +11,21 @@ adb shell am start -n com.super.name/.MainActivity
 ```
 
 **Batch**
+
 ```batch
 @echo off
+:: Define the local directory or file target
+set FILE_PATH=%USERPROFILE%\Downloads\SUper.exe
 
-:: Define the location of the APK on the phone's storage
-set PHONE_APK_PATH=/sdcard/Download/SUper.apk
-
-:: Define your app's package and main activity strings
-set PACKAGE_NAME=com.SUper.app
-set MAIN_ACTIVITY=.MainActivity
-
-echo 📂 Accessing device storage...
-:: 1. Direct the Android Package Manager to install the APK from storage
-adb shell pm install -r "%PHONE_APK_PATH%"
+echo 📂 Accessing local file...
+if not exist "%FILE_PATH%" (
+    echo ❌ File not found!
+    pause
+    exit /b
+)
 
 echo 🚀 Starting application...
-:: 2. Instantly launch the app UI
-adb shell am start -n %PACKAGE_NAME%/%MAIN_ACTIVITY%
+start "" "%FILE_PATH%"
 
 echo ✅ Done!
 pause
